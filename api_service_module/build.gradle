@@ -64,6 +64,6 @@ dependencies {
     // sdp
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
-    implementation 'com.github.hsnmrd:AlertModule:1.0-alpha2'
+    implementation 'com.github.hsnmrd:AlertModule:1.0-alpha3'
 
 }
