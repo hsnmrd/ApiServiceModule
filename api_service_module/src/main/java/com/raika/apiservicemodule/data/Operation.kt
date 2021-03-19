@@ -82,12 +82,12 @@ fun <ApiService, DefaultActivity, A> operationSendRequest(
  * **operationSendRequest** an operation for
  * * send remote request
  */
-fun <ApiService, DefaultActivity, A> operationSendRequest(
+fun <ApiService, DefaultActivity, A> operationSendRequestHandleResponse(
+    optionRemoteModel: OptionRemoteModel<ApiService, DefaultActivity>,
+    networkRequest: suspend (ApiService) -> Response<A>,
     checkResponse: suspend (
         CheckResponseModel<A>
     ) -> Unit,
-    optionRemoteModel: OptionRemoteModel<ApiService, DefaultActivity>,
-    networkRequest: suspend (ApiService) -> Response<A>,
 ): LiveData<Resource<A>> {
     val job = Job()
     val progressState: MutableLiveData<Boolean> = MutableLiveData(false)
@@ -165,13 +165,13 @@ fun <ApiService, DataBase, DefaultActivity, A> operationSendRequestWithCallBack(
  * * send remote request
  * * update local data
  */
-fun <ApiService, DataBase, DefaultActivity, A> operationSendRequestWithCallBack(
-    checkResponse: suspend (
-        CheckResponseModel<A>
-    ) -> Unit,
+fun <ApiService, DataBase, DefaultActivity, A> operationSendRequestWithCallBackHandleResponse(
     optionClasses: OptionModel<ApiService, DataBase, DefaultActivity>,
     networkRequest: suspend (ApiService) -> Response<A>,
     updateLocalData: suspend (CallBackModel<DataBase, A, ApiService>) -> Unit,
+    checkResponse: suspend (
+        CheckResponseModel<A>
+    ) -> Unit,
     updateLocalDataFailed: (suspend (db: DataBase) -> Unit)? = null,
 ): LiveData<Resource<A>> {
     
@@ -221,14 +221,14 @@ fun <ApiService, DataBase, DefaultActivity, A> operationSendRequestWithCallBack(
  * * get local data
  * * update local data
  */
-fun <ApiService, DataBase, DefaultActivity, T, A> operationSendRequestWithUpdateDatabase(
-    checkResponse: suspend (
-        CheckResponseModel<A>
-    ) -> Unit,
+fun <ApiService, DataBase, DefaultActivity, T, A> operationSendRequestWithUpdateDatabaseHandleResponse(
     optionClasses: OptionModel<ApiService, DataBase, DefaultActivity>,
     databaseQuery: (db: DataBase) -> LiveData<T>,
     networkRequest: suspend (ApiService) -> Response<A>,
     updateLocalData: suspend (DBData<DataBase, A>) -> Unit,
+    checkResponse: suspend (
+        CheckResponseModel<A>
+    ) -> Unit,
     updateLocalDataFailed: (suspend (db: DataBase) -> Unit)? = null,
 ): LiveData<Resource<T>> {
     

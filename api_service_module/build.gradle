@@ -69,6 +69,5 @@ dependencies {
 
 
     implementation 'com.github.hsnmrd:AlertModule:v1.0-alpha2'
-//    implementation project(":alert_module")
 
 }

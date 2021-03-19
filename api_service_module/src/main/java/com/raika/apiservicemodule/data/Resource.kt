@@ -3,7 +3,6 @@ package com.raika.apiservicemodule.data
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
 
-
 /**
  * **Resource** a class that handle remote request **response**
  * @param status: set status of response [Status.SUCCESS], [Status.ERROR], [Status.LOADING]
