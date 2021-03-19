@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <attr name="transparent" format="color"/>
-    <attr name="white" format="color"/>
-    <attr name="black" format="color"/>
-    <attr name="purple" format="color"/>
-    <attr name="orange" format="color"/>
+    <attr name="api_service_module_transparent" format="color"/>
+    <attr name="api_service_module_white" format="color"/>
+    <attr name="api_service_module_black" format="color"/>
+    <attr name="api_service_module_purple" format="color"/>
+    <attr name="api_service_module_orange" format="color"/>
 
 </resources>

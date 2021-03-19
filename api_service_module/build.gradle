@@ -61,9 +61,6 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt 'androidx.room:room-compiler:2.2.6'
 
-    // shared preference
-    implementation 'androidx.preference:preference-ktx:1.1.1'
-
     // sdp
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
 

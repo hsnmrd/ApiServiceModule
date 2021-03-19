@@ -9,11 +9,11 @@
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
 
-        <item name="white">@color/white_dark</item>
-        <item name="black">@color/black_dark</item>
-        <item name="transparent">@color/transparent_dark</item>
-        <item name="purple">@color/transparent_dark</item>
-        <item name="orange">@color/orange_dark</item>
+        <item name="api_service_module_white">@color/api_service_module_white_dark</item>
+        <item name="api_service_module_black">@color/api_service_module_black_dark</item>
+        <item name="api_service_module_transparent">@color/api_service_module_transparent_dark</item>
+        <item name="api_service_module_purple">@color/api_service_module_transparent_dark</item>
+        <item name="api_service_module_orange">@color/api_service_module_orange_dark</item>
 
 
     </style>

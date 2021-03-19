@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/cl_alert_dialog_rf_task_root"
-    android:background="?attr/transparent"
+    android:background="?attr/api_service_module_transparent"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <com.google.android.material.card.MaterialCardView
@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_margin="@dimen/_40sdp"
         android:layoutDirection="ltr"
-        app:cardBackgroundColor="?attr/white"
+        app:cardBackgroundColor="?attr/api_service_module_white"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
         app:contentPadding="10dp"
@@ -41,7 +41,7 @@
                 android:paddingTop="5dp"
                 android:paddingRight="5dp"
                 android:text="آیا مطمئن به قطع درخواست هستید"
-                android:textColor="?attr/black"
+                android:textColor="?attr/api_service_module_black"
                 android:textSize="@dimen/_12sdp" />
 
             <com.google.android.material.button.MaterialButton
@@ -58,7 +58,7 @@
                 android:text="قطع درخواست"
                 android:textColor="#E91E63"
                 android:textSize="@dimen/_10sdp"
-                app:backgroundTint="?attr/transparent"
+                app:backgroundTint="?attr/api_service_module_transparent"
                 app:cornerRadius="5dp"
                 app:elevation="0dp"
                 app:rippleColor="#26E91E63" />

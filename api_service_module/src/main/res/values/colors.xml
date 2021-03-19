@@ -8,19 +8,19 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="white_light">#ffffff</color>
-    <color name="white_dark">#000000</color>
+    <color name="api_service_module_white_light">#ffffff</color>
+    <color name="api_service_module_white_dark">#000000</color>
 
-    <color name="black_light">#000000</color>
-    <color name="black_dark">#ffffff</color>
+    <color name="api_service_module_black_light">#000000</color>
+    <color name="api_service_module_black_dark">#ffffff</color>
 
-    <color name="transparent_light">#00ffffff</color>
-    <color name="transparent_dark">#00000000</color>
+    <color name="api_service_module_transparent_light">#00ffffff</color>
+    <color name="api_service_module_transparent_dark">#00000000</color>
 
-    <color name="purple_light">#6747EA</color>
+    <color name="api_service_module_purple_light">#6747EA</color>
     <color name="purple_dark">#B870FF</color>
 
-    <color name="orange_light">#FE5B1D</color>
-    <color name="orange_dark">#FF4435</color>
+    <color name="api_service_module_orange_light">#FE5B1D</color>
+    <color name="api_service_module_orange_dark">#FF4435</color>
 
 </resources>

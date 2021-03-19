@@ -1,5 +1,6 @@
 package com.raika.apiservicemodule.data
 
+import android.util.Log
 import android.widget.Toast
 import com.raika.alertmodule.progress.ModuleProgress
 import com.raika.alertmodule.progress.Progress
@@ -22,14 +23,17 @@ fun <T> updateProgressByState(
     when (resource.status) {
     
         Resource.Status.LOADING -> {
+            Log.e("api_service_module", "LOADING")
+            progress?.show()
             progress?.clickListener {
+                Log.e("api_service_module", "progress clicked")
                 Toast.makeText(it, "clicked", Toast.LENGTH_SHORT).show()
                 resource.clickListener?.invoke(it)!!
             }
-            progress?.show()
         }
 
         Resource.Status.SUCCESS -> {
+            Log.e("api_service_module", "SUCCESS")
             resource.data?.let {
                 successListener?.invoke()
                 progress?.hide()
@@ -40,6 +44,7 @@ fun <T> updateProgressByState(
         }
 
         Resource.Status.ERROR -> {
+            Log.e("api_service_module", "ERROR")
             errorListener?.invoke(resource.message.toString())
             progress?.hide()
             when {
