@@ -1,5 +1,6 @@
 package com.raika.apiservicemodule.data
 
+import android.widget.Toast
 import com.raika.alertmodule.progress.ModuleProgress
 import com.raika.alertmodule.progress.Progress
 import com.raika.apiservicemodule.toast.toasting
@@ -19,9 +20,10 @@ fun <T> updateProgressByState(
     successListener: (() -> Unit)? = null
 ) {
     when (resource.status) {
-
+    
         Resource.Status.LOADING -> {
             progress?.clickListener {
+                Toast.makeText(it, "clicked", Toast.LENGTH_SHORT).show()
                 resource.clickListener?.invoke(it)!!
             }
             progress?.show()
