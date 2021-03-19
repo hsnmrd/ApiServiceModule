@@ -15,6 +15,5 @@
         <item name="api_service_module_purple">@color/api_service_module_transparent_light</item>
         <item name="api_service_module_orange">@color/api_service_module_orange_light</item>
 
-
     </style>
 </resources>
