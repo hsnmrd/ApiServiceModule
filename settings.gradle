@@ -1,0 +1,3 @@
+//include ':alert_module'
+include ':api_service_module'
+rootProject.name = "ApiServiceModule"

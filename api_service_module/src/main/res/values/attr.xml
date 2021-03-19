@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="transparent" format="color"/>
+    <attr name="white" format="color"/>
+    <attr name="black" format="color"/>
+    <attr name="purple" format="color"/>
+    <attr name="orange" format="color"/>
+
+</resources>
