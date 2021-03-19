@@ -369,9 +369,9 @@ private suspend fun <T> controller(
                 
                     clRoot.setOnClickListener {
                         dialog.dialogRD.dismiss()
-//                        progressState.postValue(true)
+                        progressState.postValue(true)
                     }
-                    dialog.dialogRD.setOnDismissListener { progressState.postValue(true) }
+                    dialog.dialogRD.setOnCancelListener { progressState.postValue(true) }
                 }
                 .show()
         return@showLoading progressState.distinctUntilChanged() as MutableLiveData<Boolean>

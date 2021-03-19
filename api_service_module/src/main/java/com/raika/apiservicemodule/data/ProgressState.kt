@@ -27,7 +27,6 @@ fun <T> updateProgressByState(
             progress?.show()
             progress?.clickListener {
                 Log.e("api_service_module", "progress clicked")
-                Toast.makeText(it, "clicked", Toast.LENGTH_SHORT).show()
                 resource.clickListener?.invoke(it)!!
             }
         }
