@@ -79,7 +79,7 @@ private fun <T> error(response: Response<T>?, message: String): Resource<T> {
         }
     }
 
-    Log.e("raika retrofit error~~", " \n$newMessage \n ")
+    Log.e("raika retrofit error", " \n$newMessage \n ")
     return Resource.error(message)
 }
 

@@ -1,10 +1,11 @@
 package com.raika.apiservicemodule.data
 
 import android.util.Log
-import android.widget.Toast
 import com.raika.alertmodule.progress.ModuleProgress
 import com.raika.alertmodule.progress.Progress
-import com.raika.apiservicemodule.toast.toasting
+import com.raika.apiservicemodule.setting.SharedPreference.apiServiceModuleNoInternetMessage
+import com.raika.apiservicemodule.setting.apiServiceModuleGetPreference
+import com.raika.apiservicemodule.toast.apiServiceModuleToasting
 
 /**
  * * show progress when async task is running
@@ -48,13 +49,11 @@ fun <T> updateProgressByState(
             progress?.hide()
             when {
                 resource.message.toString() == "اتصال اینترنت خود را بررسی کنید" -> {
-                    progress?.progressContext?.toasting("اطلاعات آفلاین")
+                    progress?.progressContext?.apiServiceModuleToasting(apiServiceModuleGetPreference(progress.progressContext).apiServiceModuleNoInternetMessage.toString())
                 }
-                resource.message.toString() == "کار قطع شد" -> {
-                    progress?.progressContext?.toasting("عملیات متوقف شد")
-                }
+                resource.message.toString() == "کار قطع شد" -> {}
                 else -> {
-                    progress?.progressContext?.toasting(resource.message.toString())
+                    progress?.progressContext?.apiServiceModuleToasting(resource.message.toString())
                 }
             }
         }
