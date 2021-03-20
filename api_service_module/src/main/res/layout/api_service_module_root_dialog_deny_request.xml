@@ -3,12 +3,12 @@
     android:theme="@style/Theme.ApiServiceModule"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/cl_alert_dialog_rf_task_root"
+    android:id="@+id/api_service_module_cl_alert_dialog_rf_task_root"
     android:background="?attr/api_service_module_transparent"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cv_alert_dialog_rf_task_title"
+        android:id="@+id/api_service_module_cv_alert_dialog_rf_task_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -31,7 +31,7 @@
             android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_alert_dialog_rf_task_title"
+                android:id="@+id/api_service_module_tv_alert_dialog_rf_task_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -45,7 +45,7 @@
                 android:textSize="@dimen/_12sdp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_root_dialog_deny_request"
+                android:id="@+id/api_service_module_btn_root_dialog_deny_request"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"

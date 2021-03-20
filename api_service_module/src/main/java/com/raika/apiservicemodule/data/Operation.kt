@@ -351,14 +351,14 @@ private suspend fun <T> controller(
     adListener: (UtilityFullScreen) -> Unit,
 ) {
     liveDataScope.emit(Resource.showLoading {
-        ModuleFullScreenAlert(it, R.layout.root_dialog_deny_request)
+        ModuleFullScreenAlert(it, R.layout.api_service_module_root_dialog_deny_request)
                 .setCancelable(true)
                 .onViewCreate { dialog ->
                     progressState.postValue(false)
                     adListener(dialog.dialogRD)
                 
-                    val btnCancel = dialog.view.findViewById<MaterialButton>(R.id.btn_root_dialog_deny_request)
-                    val clRoot = dialog.view.findViewById<ConstraintLayout>(R.id.cl_alert_dialog_rf_task_root)
+                    val btnCancel = dialog.view.findViewById<MaterialButton>(R.id.api_service_module_btn_root_dialog_deny_request)
+                    val clRoot = dialog.view.findViewById<ConstraintLayout>(R.id.api_service_module_cl_alert_dialog_rf_task_root)
                     btnCancel.setOnClickListener {
                         job.cancel()
                         GlobalScope.launch {
