@@ -3,7 +3,7 @@ package com.raika.apiservicemodule.data
 import android.util.Log
 import com.raika.alertmodule.progress.ModuleProgress
 import com.raika.alertmodule.progress.Progress
-import com.raika.apiservicemodule.setting.SharedPreference.apiServiceModuleNoInternetMessage
+import com.raika.apiservicemodule.setting.SharedPreference.apiServiceModuleSettingNoInternetMessage
 import com.raika.apiservicemodule.setting.apiServiceModuleGetPreference
 import com.raika.apiservicemodule.toast.apiServiceModuleToasting
 
@@ -49,7 +49,7 @@ fun <T> updateProgressByState(
             progress?.hide()
             when {
                 resource.message.toString() == "اتصال اینترنت خود را بررسی کنید" -> {
-                    progress?.progressContext?.apiServiceModuleToasting(apiServiceModuleGetPreference(progress.progressContext).apiServiceModuleNoInternetMessage.toString())
+                    progress?.progressContext?.apiServiceModuleToasting(apiServiceModuleGetPreference(progress.progressContext).apiServiceModuleSettingNoInternetMessage.toString())
                 }
                 resource.message.toString() == "کار قطع شد" -> {}
                 else -> {

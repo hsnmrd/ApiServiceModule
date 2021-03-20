@@ -7,6 +7,9 @@ import com.raika.alertmodule.dialog.ModuleFullScreenAlert
 import com.raika.alertmodule.dialog.utility.UtilityFullScreen
 import com.raika.apiservicemodule.R
 import com.raika.apiservicemodule.data.Resource.Status.SUCCESS
+import com.raika.apiservicemodule.setting.SharedPreference.apiServiceModuleSettingIgnoreRequestChoiceTitle
+import com.raika.apiservicemodule.setting.SharedPreference.apiServiceModuleSettingIgnoreRequestTitle
+import com.raika.apiservicemodule.setting.apiServiceModuleGetPreference
 import kotlinx.coroutines.*
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -358,7 +361,12 @@ private suspend fun <T> controller(
                     adListener(dialog.dialogRD)
                 
                     val btnCancel = dialog.view.findViewById<MaterialButton>(R.id.api_service_module_btn_root_dialog_deny_request)
+                    val tvTitle = dialog.view.findViewById<MaterialButton>(R.id.api_service_module_tv_alert_dialog_rf_task_title)
                     val clRoot = dialog.view.findViewById<ConstraintLayout>(R.id.api_service_module_cl_alert_dialog_rf_task_root)
+    
+                    btnCancel.text = apiServiceModuleGetPreference(it).apiServiceModuleSettingIgnoreRequestChoiceTitle.toString()
+                    tvTitle.text = apiServiceModuleGetPreference(it).apiServiceModuleSettingIgnoreRequestTitle.toString()
+                    
                     btnCancel.setOnClickListener {
                         job.cancel()
                         GlobalScope.launch {
