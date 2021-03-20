@@ -75,8 +75,6 @@ fun <ApiService, DefaultActivity, A> operationSendRequest(
                 adAlertDialog?.dismiss()
             }
         }
-        
-        
     }
 }
 
@@ -116,8 +114,6 @@ fun <ApiService, DefaultActivity, A> operationSendRequestHandleResponse(
                 adAlertDialog?.dismiss()
             }
         }
-        
-        
     }
 }
 
@@ -156,10 +152,7 @@ fun <ApiService, DataBase, DefaultActivity, A> operationSendRequestWithCallBack(
                 adAlertDialog?.dismiss()
             }
         }
-        
-        
     }
-    
 }
 
 
@@ -211,10 +204,7 @@ fun <ApiService, DataBase, DefaultActivity, A> operationSendRequestWithCallBackH
                 adAlertDialog?.dismiss()
             }
         }
-        
-        
     }
-    
 }
 
 
@@ -308,10 +298,7 @@ fun <ApiService, DataBase, DefaultActivity, T, A> operationSendRequestWithUpdate
                 adAlertDialog?.dismiss()
             }
         }
-        
-        
     }
-    
 }
 
 
