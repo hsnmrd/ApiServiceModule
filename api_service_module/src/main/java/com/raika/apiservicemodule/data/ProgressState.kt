@@ -5,7 +5,7 @@ import com.raika.alertmodule.progress.ModuleProgress
 import com.raika.alertmodule.progress.Progress
 import com.raika.apiservicemodule.setting.SharedPreference.apiServiceModuleSettingNoInternetMessage
 import com.raika.apiservicemodule.setting.apiServiceModuleGetPreference
-import com.raika.apiservicemodule.toast.apiServiceModuleToasting
+import com.raika.utilitymodule.toast.toasting
 
 /**
  * * show progress when async task is running
@@ -49,11 +49,11 @@ fun <T> updateProgressByState(
             progress?.hide()
             when {
                 resource.message.toString() == "اتصال اینترنت خود را بررسی کنید" -> {
-                    progress?.progressContext?.apiServiceModuleToasting(apiServiceModuleGetPreference(progress.progressContext).apiServiceModuleSettingNoInternetMessage.toString())
+                    progress?.progressActivity?.toasting(apiServiceModuleGetPreference(progress.progressActivity).apiServiceModuleSettingNoInternetMessage.toString())
                 }
                 resource.message.toString() == "کار قطع شد" -> {}
                 else -> {
-                    progress?.progressContext?.apiServiceModuleToasting(resource.message.toString())
+                    progress?.progressActivity?.toasting(resource.message.toString())
                 }
             }
         }
